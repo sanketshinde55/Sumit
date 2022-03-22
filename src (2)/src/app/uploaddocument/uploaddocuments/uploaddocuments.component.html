@@ -1,0 +1,44 @@
+<p>uploaddocuments works!</p>
+<div>
+  <form [formGroup]="documentForm" (ngSubmit)="saveFiles()">
+    <label>Customer ID</label>
+    <input type="text" class="form-control" formControlName="customer_id" />
+    <br />
+    <label for="customFile">Address Proof</label>
+    <input
+      type="file"
+      value="address_proof"
+      class="form-control"
+      id="customFile"
+      (change)="onselectedAddressProof($event)"
+    />
+    <label for="customFile">Photo</label>
+    <input
+      type="file"
+      value="photo"
+      class="form-control"
+      id="customFile"
+      (change)="onselectedPhoto($event)"
+    />
+    <label for="customFile">Signature</label>
+    <input
+      type="file"
+      value="signature"
+      class="form-control"
+      id="customFile"
+      (change)="onselectedSign($event)"
+    />
+    <label for="customFile">Thumb Impression</label>
+    <input
+      type="file"
+      value="thumb"
+      class="form-control"
+      id="customFile"
+      (change)="onselectedThumbPrint($event)"
+    />
+    <!-- <label>Customer ID</label>
+    <input type="text" class="form-control" /> -->
+    <br />
+    <button type="submit">Submit</button>
+  </form>
+</div>
